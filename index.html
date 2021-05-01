@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bank</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <main class="mt-2 mb-2">
+        <section>
+            <h1 class="text-center p-3">Personal finance</h1>
+        </section>
+
+        <section class="container">
+            <div class="row justify-content-center">
+                <article class="card col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div id="graficoPizza" class="card-img-top card-height"></div>
+                </article>
+            </div>
+
+            <div class="row justify-content-center">
+                <article class="card col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div id="graficoColuna" class="card-img-top card-height"></div>
+                </article>
+
+                <article class="card col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div id="graficoBarra" class="card-img-top card-height"></div>
+                </article>
+            </div>
+
+            <div class="row justify-content-center">
+                <article class="card col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div id="graficoLinha" class="card-img-top card-height"></div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-secondary p-3">
+        <p class="text-light m-0 text-center">UX/UI Design: Concepts and Tools</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/pie.js"></script>
+    <script src="js/column.js"></script>
+    <script src="js/row.js"></script>
+    <script src="js/line.js"></script>
+    <script>
+        google.charts.load('current', { 'packages': ['corechart'], 'language': 'pt-PT' });
+
+        google.charts.setOnLoadCallback(desenhaPizza);
+        google.charts.setOnLoadCallback(desenhaLinha);
+        google.charts.setOnLoadCallback(desenhaColuna);
+        google.charts.setOnLoadCallback(desenhaBarra);
+    </script>
+</body>
+
+</html>
